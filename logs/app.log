@@ -1,0 +1,1227 @@
+2024-09-05T10:22:20.056+04:00  INFO 17096 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 17096 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:22:20.057+04:00  INFO 17096 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:22:20.599+04:00  INFO 17096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:22:20.614+04:00  INFO 17096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:22:21.043+04:00  INFO 17096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:22:21.054+04:00  INFO 17096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:22:21.054+04:00  INFO 17096 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:22:21.101+04:00  INFO 17096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:22:21.101+04:00  INFO 17096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
+2024-09-05T10:22:21.176+04:00  INFO 17096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:22:22.476+04:00  WARN 17096 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2024-09-05T10:22:22.478+04:00  INFO 17096 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:22:22.489+04:00  INFO 17096 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:22:22.506+04:00 ERROR 17096 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'flight'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 26 common frames omitted
+
+2024-09-05T10:24:35.855+04:00  INFO 16368 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 16368 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:24:35.857+04:00  INFO 16368 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:24:36.475+04:00  INFO 16368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:24:36.491+04:00  INFO 16368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:24:36.909+04:00  INFO 16368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:24:36.919+04:00  INFO 16368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:24:36.920+04:00  INFO 16368 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:24:36.967+04:00  INFO 16368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:24:36.968+04:00  INFO 16368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1067 ms
+2024-09-05T10:24:37.041+04:00  INFO 16368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:24:38.363+04:00  WARN 16368 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2024-09-05T10:24:38.365+04:00  INFO 16368 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:24:38.375+04:00  INFO 16368 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:24:38.391+04:00 ERROR 16368 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'flight'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 26 common frames omitted
+
+2024-09-05T10:50:31.190+04:00  INFO 15516 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 15516 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:50:31.193+04:00  INFO 15516 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:50:32.009+04:00  INFO 15516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:50:32.036+04:00  INFO 15516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:50:32.840+04:00  INFO 15516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:50:32.922+04:00  INFO 15516 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1682 ms
+2024-09-05T10:50:33.026+04:00  INFO 15516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:50:33.561+04:00  INFO 15516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8eb6f9a
+2024-09-05T10:50:33.564+04:00  INFO 15516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:50:33.858+04:00  INFO 15516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T10:50:33.951+04:00  INFO 15516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T10:50:34.004+04:00  INFO 15516 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T10:50:34.438+04:00  INFO 15516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T10:50:34.534+04:00  WARN 15516 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T10:50:35.013+04:00  INFO 15516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T10:50:35.019+04:00  INFO 15516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:50:35.072+04:00  WARN 15516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T10:50:35.643+04:00  WARN 15516 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9ddbea44-2f49-4d96-826d-80ac5bf8d0f4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T10:50:35.665+04:00  INFO 15516 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T10:50:35.879+04:00  INFO 15516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T10:50:35.890+04:00  INFO 15516 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 5.31 seconds (process running for 6.501)
+2024-09-05T10:50:35.915+04:00  INFO 15516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:50:35.918+04:00  INFO 15516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:50:35.931+04:00  INFO 15516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T10:50:36.653+04:00  INFO 9352 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 9352 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:50:36.655+04:00  INFO 9352 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:50:37.181+04:00  INFO 9352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:50:37.195+04:00  INFO 9352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:50:37.587+04:00  INFO 9352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:50:37.597+04:00  INFO 9352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:50:37.597+04:00  INFO 9352 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:50:37.639+04:00  INFO 9352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:50:37.640+04:00  INFO 9352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2024-09-05T10:50:37.706+04:00  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:50:38.018+04:00  INFO 9352 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c8d58ed
+2024-09-05T10:50:38.020+04:00  INFO 9352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:50:38.428+04:00  INFO 9352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T10:50:38.514+04:00  INFO 9352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T10:50:38.554+04:00  INFO 9352 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T10:50:38.883+04:00  INFO 9352 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T10:50:38.951+04:00  WARN 9352 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T10:50:39.244+04:00  INFO 9352 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T10:50:39.248+04:00  INFO 9352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:50:39.281+04:00  WARN 9352 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T10:50:39.539+04:00  WARN 9352 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f80acd3c-6db2-4c1d-8162-0097e0ed402b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T10:50:39.554+04:00  INFO 9352 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T10:50:39.685+04:00  INFO 9352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T10:50:39.690+04:00  INFO 9352 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.462 seconds (process running for 4.148)
+2024-09-05T10:52:17.614+04:00  INFO 9352 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:52:17.616+04:00  INFO 9352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:52:17.622+04:00  INFO 9352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T10:52:20.396+04:00  INFO 8188 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 8188 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:52:20.397+04:00  INFO 8188 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:52:20.870+04:00  INFO 8188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:52:20.883+04:00  INFO 8188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:52:21.257+04:00  INFO 8188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:52:21.266+04:00  INFO 8188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:52:21.266+04:00  INFO 8188 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:52:21.307+04:00  INFO 8188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:52:21.308+04:00  INFO 8188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2024-09-05T10:52:21.376+04:00  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:52:21.626+04:00  INFO 8188 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26f0141
+2024-09-05T10:52:21.628+04:00  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:52:21.934+04:00  WARN 8188 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+2024-09-05T10:52:21.934+04:00  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:52:21.951+04:00  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T10:52:21.952+04:00  INFO 8188 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:52:21.959+04:00  INFO 8188 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:52:21.979+04:00 ERROR 8188 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: java.sql.SQLException: Field 'destination' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 27 common frames omitted
+
+2024-09-05T10:54:02.153+04:00  INFO 12776 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 12776 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:54:02.155+04:00  INFO 12776 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:54:02.675+04:00  INFO 12776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:54:02.689+04:00  INFO 12776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:54:03.067+04:00  INFO 12776 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:54:03.076+04:00  INFO 12776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:54:03.076+04:00  INFO 12776 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:54:03.117+04:00  INFO 12776 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:54:03.117+04:00  INFO 12776 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 921 ms
+2024-09-05T10:54:03.184+04:00  INFO 12776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:54:03.441+04:00  INFO 12776 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61394494
+2024-09-05T10:54:03.442+04:00  INFO 12776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:54:03.748+04:00  WARN 12776 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+2024-09-05T10:54:03.748+04:00  INFO 12776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:54:03.762+04:00  INFO 12776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T10:54:03.764+04:00  INFO 12776 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:54:03.771+04:00  INFO 12776 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:54:03.785+04:00 ERROR 12776 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #5 of class path resource [sql/data.sql]: INSERT INTO flights (datetime, empty_seats) SELECT CURDATE() + INTERVAL FLOOR(RAND() * 30) DAY + INTERVAL FLOOR(RAND() * 24) HOUR + INTERVAL FLOOR(RAND() * 60) MINUTE AS datetime, FLOOR(RAND() * 11) AS empty_seats LIMIT 100
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: java.sql.SQLException: Field 'destination' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 27 common frames omitted
+
+2024-09-05T10:56:43.635+04:00  INFO 13612 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 13612 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:56:43.636+04:00  INFO 13612 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:56:44.108+04:00  INFO 13612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:56:44.121+04:00  INFO 13612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:56:44.499+04:00  INFO 13612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:56:44.508+04:00  INFO 13612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:56:44.508+04:00  INFO 13612 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:56:44.554+04:00  INFO 13612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:56:44.554+04:00  INFO 13612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 883 ms
+2024-09-05T10:56:44.620+04:00  INFO 13612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:56:45.877+04:00  WARN 13612 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2024-09-05T10:56:45.879+04:00  INFO 13612 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:56:45.886+04:00  INFO 13612 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:56:45.901+04:00 ERROR 13612 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'flight'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 26 common frames omitted
+
+2024-09-05T10:57:24.346+04:00  INFO 6944 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 6944 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:57:24.348+04:00  INFO 6944 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:57:24.826+04:00  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:57:24.839+04:00  INFO 6944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:57:25.209+04:00  INFO 6944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:57:25.219+04:00  INFO 6944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:57:25.219+04:00  INFO 6944 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:57:25.264+04:00  INFO 6944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:57:25.264+04:00  INFO 6944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 879 ms
+2024-09-05T10:57:25.339+04:00  INFO 6944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:57:26.609+04:00  WARN 6944 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2024-09-05T10:57:26.612+04:00  INFO 6944 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:57:26.620+04:00  INFO 6944 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:57:26.635+04:00 ERROR 6944 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'flight'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 26 common frames omitted
+
+2024-09-05T10:58:11.932+04:00  INFO 5996 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 5996 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:58:11.934+04:00  INFO 5996 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:58:12.425+04:00  INFO 5996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:58:12.438+04:00  INFO 5996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:58:12.808+04:00  INFO 5996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:58:12.816+04:00  INFO 5996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:58:12.816+04:00  INFO 5996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:58:12.857+04:00  INFO 5996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:58:12.857+04:00  INFO 5996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 883 ms
+2024-09-05T10:58:12.922+04:00  INFO 5996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:58:14.196+04:00  WARN 5996 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+2024-09-05T10:58:14.199+04:00  INFO 5996 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-05T10:58:14.206+04:00  INFO 5996 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-05T10:58:14.220+04:00 ERROR 5996 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.flightManagementSystem.FlightManagementSystemAppApplication.main(FlightManagementSystemAppApplication.java:10) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:67) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:52) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'flight'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.1.11.jar:6.1.11]
+	... 26 common frames omitted
+
+2024-09-05T10:58:52.912+04:00  INFO 3192 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 3192 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:58:52.913+04:00  INFO 3192 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:58:53.373+04:00  INFO 3192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:58:53.387+04:00  INFO 3192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:58:53.757+04:00  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:58:53.765+04:00  INFO 3192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T10:58:53.766+04:00  INFO 3192 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T10:58:53.808+04:00  INFO 3192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T10:58:53.808+04:00  INFO 3192 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 861 ms
+2024-09-05T10:58:53.876+04:00  INFO 3192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:58:54.118+04:00  INFO 3192 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34c7232c
+2024-09-05T10:58:54.119+04:00  INFO 3192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:58:54.448+04:00  INFO 3192 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T10:58:54.515+04:00  INFO 3192 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T10:58:54.550+04:00  INFO 3192 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T10:58:54.830+04:00  INFO 3192 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T10:58:54.933+04:00  WARN 3192 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T10:58:55.218+04:00  INFO 3192 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T10:58:55.222+04:00  INFO 3192 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:58:55.260+04:00  WARN 3192 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T10:58:55.510+04:00  WARN 3192 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 292954d2-5e72-4d11-94a8-37a9e1760aa0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T10:58:55.522+04:00  INFO 3192 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T10:58:55.650+04:00  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T10:58:55.655+04:00  INFO 3192 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.09 seconds (process running for 3.566)
+2024-09-05T10:59:06.129+04:00  INFO 3192 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:59:06.130+04:00  INFO 3192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:59:06.135+04:00  INFO 3192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T10:59:08.297+04:00  INFO 1080 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 1080 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T10:59:08.299+04:00  INFO 1080 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T10:59:08.840+04:00  INFO 1080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T10:59:08.854+04:00  INFO 1080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T10:59:09.256+04:00  INFO 1080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T10:59:09.314+04:00  INFO 1080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 978 ms
+2024-09-05T10:59:09.384+04:00  INFO 1080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T10:59:09.646+04:00  INFO 1080 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72b2c5ed
+2024-09-05T10:59:09.647+04:00  INFO 1080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T10:59:09.931+04:00  INFO 1080 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T10:59:09.985+04:00  INFO 1080 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T10:59:10.012+04:00  INFO 1080 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T10:59:10.282+04:00  INFO 1080 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T10:59:10.335+04:00  WARN 1080 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T10:59:10.589+04:00  INFO 1080 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T10:59:10.594+04:00  INFO 1080 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:59:10.629+04:00  WARN 1080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T10:59:10.908+04:00  WARN 1080 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a45e2555-bb09-4385-b9ab-5272b7a47809
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T10:59:10.920+04:00  INFO 1080 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T10:59:11.049+04:00  INFO 1080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T10:59:11.054+04:00  INFO 1080 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.16 seconds (process running for 3.769)
+2024-09-05T10:59:11.072+04:00  INFO 1080 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T10:59:11.073+04:00  INFO 1080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T10:59:11.081+04:00  INFO 1080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:03:32.418+04:00  INFO 14208 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 14208 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:03:32.420+04:00  INFO 14208 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:03:32.884+04:00  INFO 14208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:03:32.897+04:00  INFO 14208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:03:33.267+04:00  INFO 14208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:03:33.276+04:00  INFO 14208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:03:33.276+04:00  INFO 14208 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:03:33.319+04:00  INFO 14208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:03:33.320+04:00  INFO 14208 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 863 ms
+2024-09-05T11:03:33.392+04:00  INFO 14208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:03:33.640+04:00  INFO 14208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16d431b4
+2024-09-05T11:03:33.641+04:00  INFO 14208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:03:33.995+04:00  INFO 14208 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:03:34.042+04:00  INFO 14208 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:03:34.068+04:00  INFO 14208 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:03:34.413+04:00  INFO 14208 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:03:34.480+04:00  WARN 14208 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:03:34.808+04:00  INFO 14208 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:03:34.812+04:00  INFO 14208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:03:34.845+04:00  WARN 14208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:03:35.096+04:00  WARN 14208 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1bf5727f-2f75-4d90-9e0c-61209a92fbaf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:03:35.108+04:00  INFO 14208 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:03:35.225+04:00  INFO 14208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:03:35.230+04:00  INFO 14208 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.141 seconds (process running for 3.609)
+2024-09-05T11:06:55.820+04:00  INFO 14208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:06:55.821+04:00  INFO 14208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:06:55.829+04:00  INFO 14208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:06:57.703+04:00  INFO 14272 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 14272 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:06:57.709+04:00  INFO 14272 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:06:58.160+04:00  INFO 14272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:06:58.173+04:00  INFO 14272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:06:58.530+04:00  INFO 14272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:06:58.546+04:00  INFO 14272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:06:58.546+04:00  INFO 14272 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:06:58.589+04:00  INFO 14272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:06:58.589+04:00  INFO 14272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 849 ms
+2024-09-05T11:06:58.653+04:00  INFO 14272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:06:58.904+04:00  INFO 14272 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@350da119
+2024-09-05T11:06:58.906+04:00  INFO 14272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:06:59.207+04:00  INFO 14272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:06:59.256+04:00  INFO 14272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:06:59.285+04:00  INFO 14272 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:06:59.540+04:00  INFO 14272 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:06:59.596+04:00  WARN 14272 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:06:59.843+04:00  INFO 14272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:06:59.847+04:00  INFO 14272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:06:59.880+04:00  WARN 14272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:07:00.135+04:00  WARN 14272 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fa4b3d0e-c8d3-47cd-8d2b-91a85ef267da
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:07:00.146+04:00  INFO 14272 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:07:00.262+04:00  INFO 14272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:07:00.267+04:00  INFO 14272 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.905 seconds (process running for 3.352)
+2024-09-05T11:09:25.558+04:00  INFO 14272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:09:25.560+04:00  INFO 14272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:09:25.566+04:00  INFO 14272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:09:27.512+04:00  INFO 4984 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 4984 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:09:27.514+04:00  INFO 4984 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:09:27.995+04:00  INFO 4984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:09:28.009+04:00  INFO 4984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:09:28.394+04:00  INFO 4984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:09:28.403+04:00  INFO 4984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:09:28.403+04:00  INFO 4984 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:09:28.445+04:00  INFO 4984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:09:28.445+04:00  INFO 4984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 892 ms
+2024-09-05T11:09:28.510+04:00  INFO 4984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:09:28.770+04:00  INFO 4984 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c8d58ed
+2024-09-05T11:09:28.771+04:00  INFO 4984 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:09:29.103+04:00  INFO 4984 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:09:29.154+04:00  INFO 4984 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:09:29.180+04:00  INFO 4984 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:09:29.440+04:00  INFO 4984 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:09:29.495+04:00  WARN 4984 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:09:29.747+04:00  INFO 4984 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:09:29.751+04:00  INFO 4984 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:09:29.785+04:00  WARN 4984 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:09:30.056+04:00  WARN 4984 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 86ef93d7-4814-4e4c-8f08-be6cc6ad248d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:09:30.069+04:00  INFO 4984 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:09:30.199+04:00  INFO 4984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:09:30.206+04:00  INFO 4984 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.046 seconds (process running for 3.505)
+2024-09-05T11:09:49.858+04:00  INFO 4984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:09:49.860+04:00  INFO 4984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:09:49.867+04:00  INFO 4984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:11:38.068+04:00  INFO 13648 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 13648 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:11:38.076+04:00  INFO 13648 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:11:38.549+04:00  INFO 13648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:11:38.562+04:00  INFO 13648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:11:38.932+04:00  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:11:38.941+04:00  INFO 13648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:11:38.941+04:00  INFO 13648 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:11:38.983+04:00  INFO 13648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:11:38.983+04:00  INFO 13648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2024-09-05T11:11:39.049+04:00  INFO 13648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:11:39.299+04:00  INFO 13648 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61394494
+2024-09-05T11:11:39.300+04:00  INFO 13648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:11:39.586+04:00  INFO 13648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:11:39.637+04:00  INFO 13648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:11:39.664+04:00  INFO 13648 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:11:39.929+04:00  INFO 13648 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:11:39.983+04:00  WARN 13648 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:11:40.233+04:00  INFO 13648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:11:40.237+04:00  INFO 13648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:11:40.274+04:00  WARN 13648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:11:40.524+04:00  WARN 13648 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ba402858-9167-458e-b744-08261a887fa1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:11:40.536+04:00  INFO 13648 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:11:40.656+04:00  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:11:40.663+04:00  INFO 13648 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.961 seconds (process running for 3.413)
+2024-09-05T11:12:01.000+04:00  INFO 13648 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:12:01.001+04:00  INFO 13648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:12:01.008+04:00  INFO 13648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:12:02.911+04:00  INFO 3696 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 3696 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:12:02.914+04:00  INFO 3696 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:12:03.384+04:00  INFO 3696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:12:03.398+04:00  INFO 3696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:12:03.768+04:00  INFO 3696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:12:03.776+04:00  INFO 3696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:12:03.777+04:00  INFO 3696 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:12:03.820+04:00  INFO 3696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:12:03.820+04:00  INFO 3696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 876 ms
+2024-09-05T11:12:03.887+04:00  INFO 3696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:12:04.145+04:00  INFO 3696 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28be7fec
+2024-09-05T11:12:04.146+04:00  INFO 3696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:12:04.437+04:00  INFO 3696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:12:04.485+04:00  INFO 3696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:12:04.513+04:00  INFO 3696 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:12:04.781+04:00  INFO 3696 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:12:04.831+04:00  WARN 3696 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:12:05.076+04:00  INFO 3696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:12:05.080+04:00  INFO 3696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:12:05.117+04:00  WARN 3696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:12:05.410+04:00  WARN 3696 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3132a8f1-d028-4c39-8343-6fbc49cd4594
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:12:05.422+04:00  INFO 3696 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:12:05.550+04:00  INFO 3696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:12:05.555+04:00  INFO 3696 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.002 seconds (process running for 3.446)
+2024-09-05T11:12:24.108+04:00  INFO 3696 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:12:24.110+04:00  INFO 3696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:12:24.116+04:00  INFO 3696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:12:26.104+04:00  INFO 2960 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 2960 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:12:26.106+04:00  INFO 2960 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:12:26.582+04:00  INFO 2960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:12:26.596+04:00  INFO 2960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:12:26.966+04:00  INFO 2960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:12:26.975+04:00  INFO 2960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:12:26.975+04:00  INFO 2960 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:12:27.025+04:00  INFO 2960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:12:27.025+04:00  INFO 2960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 884 ms
+2024-09-05T11:12:27.089+04:00  INFO 2960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:12:27.365+04:00  INFO 2960 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1788cb61
+2024-09-05T11:12:27.366+04:00  INFO 2960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:12:27.672+04:00  INFO 2960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:12:27.717+04:00  INFO 2960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:12:27.749+04:00  INFO 2960 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:12:28.047+04:00  INFO 2960 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:12:28.099+04:00  WARN 2960 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:12:28.364+04:00  INFO 2960 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:12:28.368+04:00  INFO 2960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:12:28.423+04:00  WARN 2960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:12:28.723+04:00  WARN 2960 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e0cefe9d-e27c-4177-93f7-60308d77b950
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:12:28.735+04:00  INFO 2960 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:12:28.855+04:00  INFO 2960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:12:28.861+04:00  INFO 2960 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.128 seconds (process running for 3.58)
+2024-09-05T11:18:18.963+04:00  INFO 2960 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:18:18.965+04:00  INFO 2960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:18:18.972+04:00  INFO 2960 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:18:20.955+04:00  INFO 12096 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 12096 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:18:20.957+04:00  INFO 12096 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:18:21.473+04:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:18:21.493+04:00  INFO 12096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:18:21.888+04:00  INFO 12096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:18:21.897+04:00  INFO 12096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:18:21.898+04:00  INFO 12096 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:18:21.945+04:00  INFO 12096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:18:21.946+04:00  INFO 12096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 954 ms
+2024-09-05T11:18:22.015+04:00  INFO 12096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:18:22.345+04:00  INFO 12096 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5657967b
+2024-09-05T11:18:22.347+04:00  INFO 12096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:18:22.673+04:00  INFO 12096 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:18:22.723+04:00  INFO 12096 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:18:22.752+04:00  INFO 12096 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:18:23.015+04:00  INFO 12096 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:18:23.070+04:00  WARN 12096 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:18:23.320+04:00  INFO 12096 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:18:23.323+04:00  INFO 12096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:18:23.357+04:00  WARN 12096 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:18:23.618+04:00  WARN 12096 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0722a925-dd38-4f5c-979a-e9561deaac10
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:18:23.628+04:00  INFO 12096 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:18:23.746+04:00  INFO 12096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:18:23.751+04:00  INFO 12096 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.139 seconds (process running for 3.6)
+2024-09-05T11:19:07.010+04:00  INFO 12096 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:19:07.011+04:00  INFO 12096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:19:07.018+04:00  INFO 12096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:19:08.902+04:00  INFO 17244 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 17244 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:19:08.903+04:00  INFO 17244 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:19:09.360+04:00  INFO 17244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:19:09.373+04:00  INFO 17244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:19:09.733+04:00  INFO 17244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:19:09.742+04:00  INFO 17244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:19:09.742+04:00  INFO 17244 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:19:09.784+04:00  INFO 17244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:19:09.784+04:00  INFO 17244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 845 ms
+2024-09-05T11:19:09.849+04:00  INFO 17244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:19:10.104+04:00  INFO 17244 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61394494
+2024-09-05T11:19:10.105+04:00  INFO 17244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:19:10.430+04:00  INFO 17244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:19:10.482+04:00  INFO 17244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:19:10.514+04:00  INFO 17244 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:19:10.774+04:00  INFO 17244 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:19:10.826+04:00  WARN 17244 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:19:11.071+04:00  INFO 17244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:19:11.075+04:00  INFO 17244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:19:11.112+04:00  WARN 17244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:19:11.363+04:00  WARN 17244 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dd4ff5aa-76ab-46d4-b409-13782916eacf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:19:11.375+04:00  INFO 17244 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:19:11.491+04:00  INFO 17244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:19:11.497+04:00  INFO 17244 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.934 seconds (process running for 3.387)
+2024-09-05T11:19:35.744+04:00  INFO 17244 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:19:35.745+04:00  INFO 17244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:19:35.754+04:00  INFO 17244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:19:37.665+04:00  INFO 15620 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 15620 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:19:37.666+04:00  INFO 15620 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:19:38.137+04:00  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:19:38.150+04:00  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:19:38.517+04:00  INFO 15620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:19:38.525+04:00  INFO 15620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:19:38.526+04:00  INFO 15620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:19:38.567+04:00  INFO 15620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:19:38.567+04:00  INFO 15620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 865 ms
+2024-09-05T11:19:38.635+04:00  INFO 15620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:19:38.889+04:00  INFO 15620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6380e9e9
+2024-09-05T11:19:38.890+04:00  INFO 15620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:19:39.193+04:00  INFO 15620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:19:39.244+04:00  INFO 15620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:19:39.269+04:00  INFO 15620 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:19:39.538+04:00  INFO 15620 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:19:39.608+04:00  WARN 15620 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:19:39.879+04:00  INFO 15620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:19:39.883+04:00  INFO 15620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:19:39.919+04:00  WARN 15620 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:19:40.188+04:00  WARN 15620 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c40950e0-7841-4ebb-a120-92c673d2c5e1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:19:40.201+04:00  INFO 15620 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:19:40.328+04:00  INFO 15620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:19:40.334+04:00  INFO 15620 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.012 seconds (process running for 3.464)
+2024-09-05T11:19:53.079+04:00  INFO 15620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:19:53.081+04:00  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:19:53.090+04:00  INFO 15620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:20:31.785+04:00  INFO 5620 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 5620 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:20:31.787+04:00  INFO 5620 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:20:32.321+04:00  INFO 5620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:20:32.336+04:00  INFO 5620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:20:32.713+04:00  INFO 5620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:20:32.722+04:00  INFO 5620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:20:32.722+04:00  INFO 5620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:20:32.764+04:00  INFO 5620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:20:32.765+04:00  INFO 5620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 936 ms
+2024-09-05T11:20:32.835+04:00  INFO 5620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:20:33.106+04:00  INFO 5620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a09484c
+2024-09-05T11:20:33.107+04:00  INFO 5620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:20:33.393+04:00  INFO 5620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:20:33.447+04:00  INFO 5620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:20:33.478+04:00  INFO 5620 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:20:33.752+04:00  INFO 5620 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:20:33.810+04:00  WARN 5620 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:20:34.077+04:00  INFO 5620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:20:34.081+04:00  INFO 5620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:20:34.116+04:00  WARN 5620 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:20:34.380+04:00  WARN 5620 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 87bf443e-e652-4c4e-b20a-86e9abfb52c8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:20:34.392+04:00  INFO 5620 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:20:34.519+04:00  INFO 5620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:20:34.524+04:00  INFO 5620 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.096 seconds (process running for 3.558)
+2024-09-05T11:22:17.688+04:00  INFO 5620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:22:17.689+04:00  INFO 5620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:22:17.696+04:00  INFO 5620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:22:19.675+04:00  INFO 12228 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 12228 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:22:19.677+04:00  INFO 12228 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:22:20.128+04:00  INFO 12228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:22:20.142+04:00  INFO 12228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:22:20.505+04:00  INFO 12228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:22:20.513+04:00  INFO 12228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:22:20.513+04:00  INFO 12228 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:22:20.555+04:00  INFO 12228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:22:20.556+04:00  INFO 12228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 842 ms
+2024-09-05T11:22:20.622+04:00  INFO 12228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:22:20.870+04:00  INFO 12228 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1788cb61
+2024-09-05T11:22:20.871+04:00  INFO 12228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:22:21.162+04:00  INFO 12228 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:22:21.209+04:00  INFO 12228 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:22:21.240+04:00  INFO 12228 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:22:21.495+04:00  INFO 12228 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:22:21.544+04:00  WARN 12228 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:22:21.790+04:00  INFO 12228 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:22:21.794+04:00  INFO 12228 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:22:21.830+04:00  WARN 12228 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:22:22.080+04:00  WARN 12228 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e07190d0-e8c1-4996-bedf-4bc6971af07d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:22:22.091+04:00  INFO 12228 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:22:22.211+04:00  INFO 12228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:22:22.217+04:00  INFO 12228 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.875 seconds (process running for 3.376)
+2024-09-05T11:22:34.754+04:00  INFO 12228 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:22:34.756+04:00  INFO 12228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:22:34.764+04:00  INFO 12228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:22:36.682+04:00  INFO 15988 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 15988 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:22:36.684+04:00  INFO 15988 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:22:37.147+04:00  INFO 15988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:22:37.160+04:00  INFO 15988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:22:37.529+04:00  INFO 15988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:22:37.538+04:00  INFO 15988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:22:37.539+04:00  INFO 15988 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:22:37.582+04:00  INFO 15988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:22:37.582+04:00  INFO 15988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 864 ms
+2024-09-05T11:22:37.651+04:00  INFO 15988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:22:37.912+04:00  INFO 15988 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34c7232c
+2024-09-05T11:22:37.914+04:00  INFO 15988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:22:38.220+04:00  INFO 15988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:22:38.267+04:00  INFO 15988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:22:38.293+04:00  INFO 15988 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:22:38.560+04:00  INFO 15988 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:22:38.611+04:00  WARN 15988 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:22:38.848+04:00  INFO 15988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:22:38.852+04:00  INFO 15988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:22:38.888+04:00  WARN 15988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:22:39.145+04:00  WARN 15988 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4285e231-cfd5-4ab5-a7f6-782cde97af7b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:22:39.157+04:00  INFO 15988 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:22:39.280+04:00  INFO 15988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:22:39.286+04:00  INFO 15988 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.951 seconds (process running for 3.44)
+2024-09-05T11:26:42.729+04:00  INFO 15988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:26:42.731+04:00  INFO 15988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:26:42.739+04:00  INFO 15988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:26:44.655+04:00  INFO 14988 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 14988 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:26:44.657+04:00  INFO 14988 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:26:45.149+04:00  INFO 14988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:26:45.163+04:00  INFO 14988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:26:45.538+04:00  INFO 14988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:26:45.547+04:00  INFO 14988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:26:45.547+04:00  INFO 14988 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:26:45.590+04:00  INFO 14988 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:26:45.591+04:00  INFO 14988 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 893 ms
+2024-09-05T11:26:45.663+04:00  INFO 14988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:26:45.920+04:00  INFO 14988 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14de1901
+2024-09-05T11:26:45.921+04:00  INFO 14988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:26:46.190+04:00  INFO 14988 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:26:46.238+04:00  INFO 14988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:26:46.268+04:00  INFO 14988 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:26:46.530+04:00  INFO 14988 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:26:46.587+04:00  WARN 14988 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:26:46.837+04:00  INFO 14988 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:26:46.841+04:00  INFO 14988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:26:46.876+04:00  WARN 14988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:26:47.126+04:00  WARN 14988 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e7bf0abc-8aef-4505-bcec-8bd348b3273e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:26:47.137+04:00  INFO 14988 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:26:47.257+04:00  INFO 14988 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:26:47.263+04:00  INFO 14988 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.957 seconds (process running for 3.414)
+2024-09-05T11:29:35.067+04:00  INFO 14988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:29:35.069+04:00  INFO 14988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:29:35.077+04:00  INFO 14988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:29:37.024+04:00  INFO 10368 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 10368 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:29:37.032+04:00  INFO 10368 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:29:37.543+04:00  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:29:37.557+04:00  INFO 10368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:29:37.937+04:00  INFO 10368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:29:37.946+04:00  INFO 10368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:29:37.946+04:00  INFO 10368 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:29:37.990+04:00  INFO 10368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:29:37.990+04:00  INFO 10368 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 919 ms
+2024-09-05T11:29:38.073+04:00  INFO 10368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:29:38.371+04:00  INFO 10368 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5657967b
+2024-09-05T11:29:38.373+04:00  INFO 10368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:29:38.705+04:00  INFO 10368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:29:38.752+04:00  INFO 10368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:29:38.789+04:00  INFO 10368 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:29:39.119+04:00  INFO 10368 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:29:39.170+04:00  WARN 10368 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:29:39.497+04:00  INFO 10368 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:29:39.503+04:00  INFO 10368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:29:39.547+04:00  WARN 10368 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:29:39.851+04:00  WARN 10368 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 334bb0f6-2bb4-4ae9-a0dd-a17e7fbf0702
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:29:39.866+04:00  INFO 10368 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:29:40.015+04:00  INFO 10368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:29:40.020+04:00  INFO 10368 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.373 seconds (process running for 3.898)
+2024-09-05T11:33:53.326+04:00  INFO 10368 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:33:53.328+04:00  INFO 10368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:33:53.334+04:00  INFO 10368 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:33:55.299+04:00  INFO 11048 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 11048 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:33:55.300+04:00  INFO 11048 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:33:55.768+04:00  INFO 11048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:33:55.784+04:00  INFO 11048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:33:56.165+04:00  INFO 11048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:33:56.174+04:00  INFO 11048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:33:56.174+04:00  INFO 11048 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:33:56.218+04:00  INFO 11048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:33:56.218+04:00  INFO 11048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 884 ms
+2024-09-05T11:33:56.284+04:00  INFO 11048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:33:56.533+04:00  INFO 11048 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34c7232c
+2024-09-05T11:33:56.534+04:00  INFO 11048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:33:56.858+04:00  INFO 11048 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:33:56.907+04:00  INFO 11048 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:33:56.938+04:00  INFO 11048 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:33:57.203+04:00  INFO 11048 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:33:57.257+04:00  WARN 11048 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:33:57.508+04:00  INFO 11048 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:33:57.512+04:00  INFO 11048 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:33:57.546+04:00  WARN 11048 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:33:57.795+04:00  WARN 11048 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bc978010-ff81-43e5-9c03-b05c39979325
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:33:57.806+04:00  INFO 11048 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:33:57.930+04:00  INFO 11048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:33:57.935+04:00  INFO 11048 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.975 seconds (process running for 3.444)
+2024-09-05T11:34:23.436+04:00  INFO 11048 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:34:23.437+04:00  INFO 11048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:34:23.444+04:00  INFO 11048 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T11:34:25.297+04:00  INFO 13928 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 13928 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T11:34:25.299+04:00  INFO 13928 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T11:34:25.757+04:00  INFO 13928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T11:34:25.770+04:00  INFO 13928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2024-09-05T11:34:26.144+04:00  INFO 13928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T11:34:26.152+04:00  INFO 13928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T11:34:26.153+04:00  INFO 13928 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T11:34:26.194+04:00  INFO 13928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T11:34:26.195+04:00  INFO 13928 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 862 ms
+2024-09-05T11:34:26.258+04:00  INFO 13928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T11:34:26.519+04:00  INFO 13928 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@350da119
+2024-09-05T11:34:26.520+04:00  INFO 13928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T11:34:26.793+04:00  INFO 13928 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T11:34:26.842+04:00  INFO 13928 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T11:34:26.872+04:00  INFO 13928 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T11:34:27.194+04:00  INFO 13928 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T11:34:27.248+04:00  WARN 13928 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T11:34:27.501+04:00  INFO 13928 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T11:34:27.505+04:00  INFO 13928 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:34:27.541+04:00  WARN 13928 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T11:34:27.800+04:00  WARN 13928 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d341713a-1cb2-4351-82f6-5070920d80b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T11:34:27.811+04:00  INFO 13928 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T11:34:27.931+04:00  INFO 13928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T11:34:27.936+04:00  INFO 13928 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 2.983 seconds (process running for 3.441)
+2024-09-05T11:34:47.776+04:00  INFO 13928 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T11:34:47.777+04:00  INFO 13928 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T11:34:47.785+04:00  INFO 13928 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T12:03:29.711+04:00  INFO 14736 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 14736 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T12:03:29.713+04:00  INFO 14736 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T12:03:30.259+04:00  INFO 14736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T12:03:30.276+04:00  INFO 14736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-09-05T12:03:30.694+04:00  INFO 14736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T12:03:30.705+04:00  INFO 14736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T12:03:30.705+04:00  INFO 14736 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T12:03:30.757+04:00  INFO 14736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T12:03:30.758+04:00  INFO 14736 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1008 ms
+2024-09-05T12:03:30.831+04:00  INFO 14736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T12:03:31.175+04:00  INFO 14736 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c0b51da
+2024-09-05T12:03:31.177+04:00  INFO 14736 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T12:03:31.695+04:00  INFO 14736 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T12:03:31.765+04:00  INFO 14736 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T12:03:31.802+04:00  INFO 14736 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T12:03:32.137+04:00  INFO 14736 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T12:03:32.202+04:00  WARN 14736 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T12:03:32.978+04:00  INFO 14736 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T12:03:33.187+04:00  INFO 14736 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:03:33.228+04:00  WARN 14736 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T12:03:33.505+04:00  WARN 14736 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2cf04935-e192-4239-8fc3-39bf81c29a18
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T12:03:33.519+04:00  INFO 14736 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T12:03:33.656+04:00  INFO 14736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T12:03:33.661+04:00  INFO 14736 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 4.315 seconds (process running for 4.807)
+2024-09-05T12:04:33.048+04:00  INFO 14736 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:04:33.050+04:00  INFO 14736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T12:04:33.059+04:00  INFO 14736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T12:04:35.233+04:00  INFO 3668 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 3668 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T12:04:35.234+04:00  INFO 3668 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T12:04:35.737+04:00  INFO 3668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T12:04:35.751+04:00  INFO 3668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T12:04:36.132+04:00  INFO 3668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T12:04:36.141+04:00  INFO 3668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T12:04:36.141+04:00  INFO 3668 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T12:04:36.183+04:00  INFO 3668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T12:04:36.183+04:00  INFO 3668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 913 ms
+2024-09-05T12:04:36.254+04:00  INFO 3668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T12:04:36.503+04:00  INFO 3668 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@216372b7
+2024-09-05T12:04:36.505+04:00  INFO 3668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T12:04:36.830+04:00  INFO 3668 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T12:04:36.878+04:00  INFO 3668 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T12:04:36.909+04:00  INFO 3668 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T12:04:37.169+04:00  INFO 3668 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T12:04:37.234+04:00  WARN 3668 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T12:04:37.956+04:00  INFO 3668 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T12:04:38.117+04:00  INFO 3668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:04:38.155+04:00  WARN 3668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T12:04:38.424+04:00  WARN 3668 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 127e73d7-a17a-4826-8800-319fac508c99
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T12:04:38.436+04:00  INFO 3668 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T12:04:38.561+04:00  INFO 3668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T12:04:38.567+04:00  INFO 3668 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.673 seconds (process running for 4.143)
+2024-09-05T12:05:46.040+04:00  INFO 3668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:05:46.041+04:00  INFO 3668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T12:05:46.048+04:00  INFO 3668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-05T12:05:49.064+04:00  INFO 13720 --- [main] c.f.FlightManagementSystemAppApplication : Starting FlightManagementSystemAppApplication using Java 22.0.1 with PID 13720 (C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp\build\classes\java\main started by mmukhtarov in C:\Users\mmukhtarov\IdeaProjects\FlightManagementSystemApp)
+2024-09-05T12:05:49.066+04:00  INFO 13720 --- [main] c.f.FlightManagementSystemAppApplication : No active profile set, falling back to 1 default profile: "default"
+2024-09-05T12:05:49.552+04:00  INFO 13720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-05T12:05:49.565+04:00  INFO 13720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2024-09-05T12:05:49.934+04:00  INFO 13720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-05T12:05:49.943+04:00  INFO 13720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-05T12:05:49.944+04:00  INFO 13720 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-09-05T12:05:49.986+04:00  INFO 13720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-05T12:05:49.986+04:00  INFO 13720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 885 ms
+2024-09-05T12:05:50.053+04:00  INFO 13720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-05T12:05:50.313+04:00  INFO 13720 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6222391a
+2024-09-05T12:05:50.314+04:00  INFO 13720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-05T12:05:50.590+04:00  INFO 13720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-05T12:05:50.638+04:00  INFO 13720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-05T12:05:50.666+04:00  INFO 13720 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-05T12:05:50.920+04:00  INFO 13720 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-05T12:05:50.970+04:00  WARN 13720 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-05T12:05:51.683+04:00  INFO 13720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-05T12:05:51.851+04:00  INFO 13720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:05:51.884+04:00  WARN 13720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-05T12:05:52.133+04:00  WARN 13720 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ef7320d9-484a-43e8-a607-bb50140d6cfd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-09-05T12:05:52.146+04:00  INFO 13720 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-05T12:05:52.265+04:00  INFO 13720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-05T12:05:52.270+04:00  INFO 13720 --- [main] c.f.FlightManagementSystemAppApplication : Started FlightManagementSystemAppApplication in 3.548 seconds (process running for 4.024)
+2024-09-05T12:08:26.715+04:00  INFO 13720 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-05T12:08:26.717+04:00  INFO 13720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-05T12:08:26.723+04:00  INFO 13720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
