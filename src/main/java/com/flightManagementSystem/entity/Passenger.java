@@ -26,8 +26,8 @@ public class Passenger {
     @ManyToOne
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @JoinColumn(name = "booking_id", nullable = false)
-    private Booking booking;
+    @JoinColumn(name = "Book_id", nullable = false)
+    private Book Book;
 
     @Builder.Default
     @Column(name = "is_enabled", nullable = false)
