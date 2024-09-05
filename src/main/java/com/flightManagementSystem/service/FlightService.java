@@ -12,13 +12,14 @@ public interface FlightService {
 
     Page<FlightDto> getAllFlights(int pageSize, int pageNumber);
 
-    Page<FlightDto> getAllFlightsIn24Hours(int pageSize, int pageNumber);
+    Page<FlightDto> findAllByDatetimeBetweenAndIsEnabledTrue(int pageSize, int pageNumber);
 
-    Page<FlightDto> searchFlight(String destination, ZonedDateTime datetime, int tickets);
+    Page<FlightDto> searchFlight(String destination, ZonedDateTime datetime, int tickets,
+                                 int pageNumber, int pageSize);
 
     FlightDto getFlightById(Long id);
 
-    FlightDto updateFlight(FlightRequest flightRequest);
+    FlightDto updateFlight(FlightDto flightDto);
 
     void deleteFlight(Long id);
 }

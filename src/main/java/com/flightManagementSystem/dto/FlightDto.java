@@ -9,7 +9,7 @@ import java.time.ZonedDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FlightDto implements Serializable {
-    private int id;
+    private Long id;
     private ZonedDateTime datetime;
     private String destination;
     private int emptySeats;
